@@ -25,7 +25,7 @@ int main(int argc, char *argv[]) {
         return 1;
     }
 
-    ExifContent *content = exif_data_get_content(exif);
+    ExifContent *content = exif->ifd[EXIF_IFD_0];
 
     print_tag(EXIF_IFD_0, EXIF_TAG_MAKE, content);
     print_tag(EXIF_IFD_0, EXIF_TAG_MODEL, content);
@@ -35,3 +35,4 @@ int main(int argc, char *argv[]) {
 
     return 0;
 }
+
